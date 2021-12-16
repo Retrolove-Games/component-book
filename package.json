@@ -29,6 +29,7 @@
     "babel-loader": "^8.2.3",
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
+    "sass-resources-loader": "^2.2.4",
     "storybook-dark-mode": "^1.0.8"
   },
   "dependencies": {

@@ -31,6 +31,14 @@ module.exports = {
           },
         },
         "sass-loader",
+        {
+          loader: "sass-resources-loader",
+          options: {
+            resources: [
+              path.resolve(__dirname, './local.scss')
+            ]
+          }
+        }
       ],
       include: path.resolve(__dirname, "../"),
     });
