@@ -1,0 +1,33 @@
+{
+  "name": "component-book",
+  "version": "1.0.0",
+  "description": "web-ui components documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Retrolove-Games/component-book.git"
+  },
+  "author": "Konrad Fedorczyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Retrolove-Games/component-book/issues"
+  },
+  "homepage": "https://github.com/Retrolove-Games/component-book#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "babel-loader": "^8.2.3"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
