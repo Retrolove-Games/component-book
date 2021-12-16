@@ -35,7 +35,8 @@ module.exports = {
           loader: "sass-resources-loader",
           options: {
             resources: [
-              path.resolve(__dirname, './local.scss')
+              path.resolve(__dirname, '../web-ui/packages/themes/src/dark.scss'),
+              path.resolve(__dirname, '../web-ui/packages/themes/src/light.scss'),
             ]
           }
         }

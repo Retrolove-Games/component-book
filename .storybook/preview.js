@@ -1,4 +1,6 @@
-import { themes } from '@storybook/theming';
+import React from "react";
+import { useDarkMode } from "storybook-dark-mode";
+import { themes } from "@storybook/theming";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,8 +10,16 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  viewMode: 'docs',
+  viewMode: "docs",
   docs: {
     theme: themes.dark,
-  }
-}
+  },
+};
+
+export const decorators = [
+  (Story) => (
+    <div data-theme={useDarkMode() ? "dark" : "light"}>
+      <Story />
+    </div>
+  ),
+];
