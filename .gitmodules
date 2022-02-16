@@ -1,3 +1,4 @@
 [submodule "web-ui"]
 	path = web-ui
-	url = git@github.com:Retrolove-Games/web-ui.git
+	url = ../web-ui.git
+	branch = develop
