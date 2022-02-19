@@ -1,11 +1,10 @@
 <img src="logo-retrolove-shop.svg" width="200">
 
-
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 # component-book
 
-This repository uses submodule to display [web-ui](https://github.com/Retrolove-Games/web-ui) components. 
+This repository uses submodule to display [web-ui](https://github.com/Retrolove-Games/web-ui) components.
 
 ## Initialize repository
 
@@ -19,3 +18,21 @@ npm run update-submodules
 ```bash
 npm run storybook
 ```
+
+## Updating submodule with packages
+
+```bash
+npm run update-submodules
+```
+
+If there are any new packages, you need to map them:
+
+```js
+  // @retrolove-games/ui-themes
+  "@retrolove-games/ui-themes": path.resolve(
+    __dirname,
+    `${PACKAGES_PATH}/themes/src/index`
+  ),
+```
+
+In the file: `.storybook/packageAliases.js`.
