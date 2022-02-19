@@ -19,15 +19,10 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
-    config.resolve.alias = {
-      "@retrolove-games/ui-themes": path.resolve(
-        __dirname,
-        "../web-ui/packages/themes/src/index"
-      ),
-    };
+    config.resolve.alias = require("./packageAliases");
 
     // Make whatever fine-grained changes you need
-    config.module.rules.push({
+    /* config.module.rules.push({
       test: /\.scss$/,
       use: [
         "style-loader",
@@ -41,7 +36,7 @@ module.exports = {
             },
           },
         },
-        /*"sass-loader",
+        "sass-loader",
         {
           loader: "sass-resources-loader",
           options: {
@@ -50,10 +45,10 @@ module.exports = {
               path.resolve(__dirname, '../web-ui/packages/themes/src/light.scss'),
             ]
           }
-        } */
+        }
       ],
       include: path.resolve(__dirname, "../"),
-    });
+    }); */
 
     // Return the altered config
     return config;
