@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloWorld from "../web-ui/packages/hello-world/src";
+import HelloWorld from "@retrolove-games/ui-hello-world";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
