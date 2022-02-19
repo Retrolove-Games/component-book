@@ -31,7 +31,7 @@ If there are any new packages, you need to map them:
   // @retrolove-games/ui-themes
   "@retrolove-games/ui-themes": path.resolve(
     __dirname,
-    `${PACKAGES_PATH}/themes/src/index`
+    `${PACKAGES_PATH}/themes/src/[file name or nothing if index exists]`
   ),
 ```
 
