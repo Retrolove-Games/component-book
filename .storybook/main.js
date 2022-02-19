@@ -5,7 +5,11 @@ module.exports = {
     "../stories/**/*.stories.mdx",
     "../stories/**/*.stories.@(js|jsx|ts|tsx)",
   ],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials", "storybook-dark-mode"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "storybook-dark-mode",
+  ],
   framework: "@storybook/react",
   core: {
     builder: "webpack5",
@@ -15,22 +19,29 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
+    config.resolve.alias = {
+      "@retrolove-games/ui-themes": path.resolve(
+        __dirname,
+        "../web-ui/packages/themes/src/index"
+      ),
+    };
+
     // Make whatever fine-grained changes you need
     config.module.rules.push({
       test: /\.scss$/,
       use: [
         "style-loader",
         {
-          loader: 'css-loader',
+          loader: "css-loader",
           options: {
             modules: {
               auto: true,
-              localIdentName: '[name]__[local]--[hash:base64:5]',
-              exportLocalsConvention: 'camelCase'
+              localIdentName: "[name]__[local]--[hash:base64:5]",
+              exportLocalsConvention: "camelCase",
             },
           },
         },
-        "sass-loader",
+        /*"sass-loader",
         {
           loader: "sass-resources-loader",
           options: {
@@ -39,7 +50,7 @@ module.exports = {
               path.resolve(__dirname, '../web-ui/packages/themes/src/light.scss'),
             ]
           }
-        }
+        } */
       ],
       include: path.resolve(__dirname, "../"),
     });
