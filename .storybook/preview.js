@@ -2,6 +2,7 @@ import React from "react";
 import { useDarkMode } from "storybook-dark-mode";
 import { themes } from "@storybook/theming";
 import { darkTheme } from "@retrolove-games/ui-themes";
+import { DocsContainer } from './DocsContainer';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -13,7 +14,8 @@ export const parameters = {
   },
   viewMode: "docs",
   docs: {
-    theme: themes.dark,
+    // theme: themes.dark,
+    container: DocsContainer,
   },
 };
 
