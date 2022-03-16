@@ -1,6 +1,7 @@
 import React from "react";
 import { useDarkMode } from "storybook-dark-mode";
 import { themes } from "@storybook/theming";
+import { darkTheme } from "@retrolove-games/ui-themes";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -18,7 +19,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <div data-theme={useDarkMode() ? "dark" : "light"}>
+    <div className={useDarkMode() ? darkTheme.className : "light"}>
       <Story />
     </div>
   ),
