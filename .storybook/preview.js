@@ -1,6 +1,5 @@
 import React from "react";
 import { useDarkMode } from "storybook-dark-mode";
-import { themes } from "@storybook/theming";
 import { darkTheme } from "@retrolove-games/ui-themes";
 import { DocsContainer } from './DocsContainer';
 
