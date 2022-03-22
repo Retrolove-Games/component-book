@@ -21,34 +21,26 @@ module.exports = {
 
     config.resolve.alias = require("./packageAliases");
 
-    // Make whatever fine-grained changes you need
-    /* config.module.rules.push({
-      test: /\.scss$/,
-      use: [
-        "style-loader",
-        {
-          loader: "css-loader",
-          options: {
-            modules: {
-              auto: true,
-              localIdentName: "[name]__[local]--[hash:base64:5]",
-              exportLocalsConvention: "camelCase",
+    const fileLoaderRule = config.module.rules.find(
+      (rule) => rule.test && rule.test.test(".svg")
+    );
+    fileLoaderRule.exclude = /\.svg$/;
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      enforce: "pre",
+      loader: require.resolve("@svgr/webpack"),
+      options: {
+        svgoConfig: {
+          plugins: [
+            {
+              name: "prefixIds",
+              active: false,
             },
-          },
+          ],
         },
-        "sass-loader",
-        {
-          loader: "sass-resources-loader",
-          options: {
-            resources: [
-              path.resolve(__dirname, '../web-ui/packages/themes/src/dark.scss'),
-              path.resolve(__dirname, '../web-ui/packages/themes/src/light.scss'),
-            ]
-          }
-        }
-      ],
-      include: path.resolve(__dirname, "../"),
-    }); */
+      },
+    });
 
     // Return the altered config
     return config;
