@@ -15,7 +15,10 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "outDir": "dist"
+    "outDir": "dist",
   },
-  "include": ["web-ui"]
+  "include": ["web-ui"],
+  "paths": {
+    "@retrolove-games": ["web-ui/packages/*"]
+  },
 }
