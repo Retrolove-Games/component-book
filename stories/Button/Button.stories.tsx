@@ -17,5 +17,12 @@ Button.argTypes = {
     control: {
       type: "select",
     }
+  },
+  color: {
+    options: ["red", "neonBlue"],
+    defaultValue: "neonBlue",
+    control: {
+      type: "select",
+    }
   }
 };
