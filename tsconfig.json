@@ -17,8 +17,9 @@
     "declaration": true,
     "outDir": "dist",
   },
+  // "baseUrl": "./web-ui",
   "include": ["web-ui"],
   "paths": {
-    "@retrolove-games": ["web-ui/packages/*"]
+    "@retrolove-games/*": ["packages/*"]
   },
 }

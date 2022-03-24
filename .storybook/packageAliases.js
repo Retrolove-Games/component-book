@@ -8,7 +8,8 @@ const aliases = {};
 [
   "themes",
   "hello-world",
-  "logo"
+  "logo",
+  "buton"
 ].map(alias => {
   aliases[`@retrolove-games/ui-${alias}`] = path.resolve(
     __dirname,
