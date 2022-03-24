@@ -4,6 +4,7 @@ import { darkTheme } from "@retrolove-games/ui-themes";
 import { DocsContainer } from './DocsContainer';
 const { addDecorator } = require('@storybook/react');
 const { withPropsTable } = require('storybook-addon-react-docgen');
+import "@retrolove-games/css-reset";
 
 addDecorator(withPropsTable);
 
