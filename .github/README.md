@@ -6,6 +6,10 @@
 
 This repository uses submodule to display [web-ui](https://github.com/Retrolove-Games/web-ui) components.
 
+## Useful links
+
+* [Control types](https://storybook.js.org/docs/react/essentials/controls).
+
 ## Initialize repository
 
 ```bash
