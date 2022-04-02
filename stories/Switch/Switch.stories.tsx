@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch as SwitchComponent } from "../../web-ui/packages/switch/src";
+import { IconSun, IconMoon } from "../../web-ui/packages/icon/src";
 
 export default {
   title: "web-ui/Switch",
@@ -9,8 +10,16 @@ export default {
 export const Switch = (args) => {
   const [toggle, setToggle] = React.useState(false);
 
-  return <SwitchComponent isOn={toggle} handleToggle={() => setToggle(!toggle)} {...args}/>;
-}
+  return (
+    <SwitchComponent
+      leftIcon={<IconMoon size="xsmall" />}
+      rightIcon={<IconSun size="xsmall" />}
+      isOn={toggle}
+      handleToggle={() => setToggle(!toggle)}
+      {...args}
+    />
+  );
+};
 
 Switch.argTypes = {
   size: {
@@ -18,12 +27,12 @@ Switch.argTypes = {
     defaultValue: "small",
     control: {
       type: "select",
-    }
+    },
   },
   id: {
     defaultValue: "test",
     control: {
       type: "text",
-    }
+    },
   },
 };
